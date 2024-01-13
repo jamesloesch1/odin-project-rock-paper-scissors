@@ -14,7 +14,7 @@ h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#score {
+#outcome {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@ h1 {
     width: 300px;
     padding: 10px;
     margin: 10px;
-    background-color: goldenrod;
+    background-color: royalblue;
 }
 
 p {
@@ -35,18 +35,40 @@ p {
 .container {
     padding: 50px;
     margin: 10px;
+    /* display: flex; */
 }
 
-.container.choice {
-    padding: 50px;
+h3 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.choice.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     margin: 10px;
     height: 100px;
     width: 100px;
-    border: 1px solid black;
+  
 }
 
 button {
-    margin: 40px;
+    margin: 30px;
     font-size: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.outcome.text {
+    font-size: 28px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
 }
