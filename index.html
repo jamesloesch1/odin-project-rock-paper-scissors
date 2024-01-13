@@ -10,21 +10,30 @@
 
         <h1>Rock, Paper, Scissors!</h1>
 
-        <div id="score">
-            <p class="humanScore"></p>
-            <p class="computerScore"></p>
+        <div id="outcome">
+            <p class="outcome text"></p>
         </div>
 
         <div class="container">
+            <h3>Choose:</h3>
             <button class="rock">Rock</button>
             <button class="paper">Paper</button>
             <button class="scissors">Scissors</button>
         </div>
 
-        <div class="container choice">
-            <p id="humanChoice"></p>
-        </div>
+        <div class="round">
 
+            <p>Human:</p>
+            <div class="user choice container">
+                <p id="user-choice-text"></p>
+            </div>
+
+            <p>Computer:</p>
+            <div class="computer choice container">
+                <p id="computer-choice-text"></p>
+            </div>
+
+        </div>
         <script src="srcipt.js"></script>
     </body>
 </html>
