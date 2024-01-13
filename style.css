@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid black;
+    height: 100px;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    background-color: goldenrod;
+}
+
+p {
+    font-weight: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container {
+    padding: 50px;
+    margin: 10px;
+}
+
+.container.choice {
+    padding: 50px;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+button {
+    margin: 40px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
