@@ -9,54 +9,86 @@
 // Scissors beats paper
 // Paper beats rock 
 
-// This function gets the choice from the computer
+// Three variables for button selectors 
+
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+
+let choiceContainer = document.querySelector('.container.choice');
+
+// Initialize user choice variable to store user choice 
+
+let userChoice;
+
+// Event listeners for user choice and associated buttons 
+
+let humanChoice = document.querySelector('#humanChoice');
+
+
+rock.addEventListener('click', () => {
+    userChoice = 'rock';
+    humanChoice.textContent = userChoice;;
+});
+
+paper.addEventListener('click', () => {
+    userChoice = 'paper';
+    humanChoice.textContent = userChoice;;
+});
+
+scissors.addEventListener('click', () => {
+    userChoice = 'scissors';
+    humanChoice.textContent = userChoice;;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Possible computer choices 
 
 const CHOICES = ["rock", "paper", "scissors"];
+
+// Function to get computer choice 
 
 const computerChoice = function getComputerChoice() {
     const randomIndex = Math.floor(Math.random() * 3);
     return CHOICES[randomIndex];
 }
 
-// This function gets a choice from the user and makes sure that it is valid 
-
-const userChoice = function getUserChoice(){
-    let choice;
-    do {
-        choice = prompt("Rock, Paper, Scissors?").toLocaleLowerCase();
-    } while (!CHOICES.includes(choice));
-    return choice;
-}
+// initialing the score element so we have a place to display the score 
+let score = document.querySelector('#container');
 
 
-function determineWinner(computerChoice, userChoice) {
+// function determineWinner(computerChoice, userChoice) {
 
-    let computer = computerChoice();
-    let human = userChoice();
+//     let computer = computerChoice();
+//     let human = userChoice;
 
-    console.log(computer);
-    console.log(human);
+//     console.log(computer);
+//     console.log(human);
 
-    if (computer === human) {
-         console.log("Draw");
-    } else if (computer == "rock" && human == "scissors" || computer == "paper" && human == "rock" || computer == "scissors" && human == "paper") {
-        console.log("Computer wins");
-    } else {
-        console.log("Human wins");
-    }
-}
+//     if (computer === human) {
+//          console.log("Draw");
+//     } else if (computer == "rock" && human == "scissors" || computer == "paper" && human == "rock" || computer == "scissors" && human == "paper") {
+//         console.log("Computer wins");
+//     } else {
+//         console.log("Human wins");
+//     }
+// }
 
 
-// This function plays 5 rounds of Rock, Paper, Scissors
 
-function game() {
-    for (let i = 1; i <= 5; i++) {
-        console.log(`Round: ${i}`)
-        determineWinner(computerChoice, userChoice);
-    }
-}
-
-game();
 
 
 
