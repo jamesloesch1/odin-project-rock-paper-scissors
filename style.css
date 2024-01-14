@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -11,10 +16,10 @@ h1 {
     align-items: center;
     padding: 20px;
     margin: 10px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#outcome {
+#outcome, 
+#scoreboard {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,37 +32,42 @@ h1 {
     background-color: royalblue;
 }
 
+.user.score.container, 
+.computer.score.container,
+.round-number {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.user.score.container, 
+.computer.score.container p {
+    color: whitesmoke;
+}
+
 p {
     font-weight: 100;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .container {
     padding: 50px;
     margin: 10px;
-    /* display: flex; */
+    display: flex;
+    justify-content: center;
 }
 
 h3 {
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.choice.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-    height: 100px;
-    width: 100px;
-  
 }
 
 button {
     margin: 30px;
     font-size: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .round {
@@ -69,6 +79,25 @@ button {
 
 .outcome.text {
     font-size: 28px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
+}
+
+.computer.choice.container,
+.user.choice.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    gap: 20px;
+}
+
+.container.score.outcome {
+    display: flex;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    align-self: center;
 }
