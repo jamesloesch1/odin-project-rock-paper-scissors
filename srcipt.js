@@ -14,7 +14,7 @@ let computerChoiceText = document.querySelector('#computer-choice-text');
 
 // Computer choice
 
-const CHOICES = ["rock", "paper", "scissors"];
+const CHOICES = ["Rock", "Paper", "Scissors"];
 
 const computerChoice = function getComputerChoice() {
 
@@ -22,21 +22,16 @@ const computerChoice = function getComputerChoice() {
     return CHOICES[randomIndex];
 };
 
-// Player choice
+// Initialize round variable 
 
-rock.addEventListener('click', () => {
-    userChoice = 'rock';
-});
+let round = 0;
 
-paper.addEventListener('click', () => {
-    userChoice = 'paper';
-});
+// Initialize score 
 
-scissors.addEventListener('click', () => {
-    userChoice = 'scissors';
-});
+let computerScore = 0;
+let userScore = 0;
 
-// Function to play a round and determine a winner
+// Function that compares user choice and computer choice, determines a winner, and then increments the round number 
 
 function determineWinner(computerChoice, userChoice) {
 
@@ -47,25 +42,59 @@ function determineWinner(computerChoice, userChoice) {
     computerChoiceText.textContent = computer;
 
     if (computer === human) {
-         outcomeText.textContent = "Draw";
-    } else if (computer == "rock" && human == "scissors" || computer == "paper" && human == "rock" || computer == "scissors" && human == "paper") {
+        outcomeText.textContent = "Draw";
+        round++;
+    } else if (computer == "Rock" && human == "Scissors" || computer == "Paper" && human == "Rock" || computer == "Scissors" && human == "Paper") {
         outcomeText.textContent = "Computer wins"
+        computerScore++;
+        computerScoreText.textContent = `${computerScore}`
+        round++;
     } else {
         outcomeText.textContent = "Human wins";
+        userScore++;
+        userScoreText.textContent = `${userScore}`
+        round++;
     }
+
+    roundNumberText.textContent = `${round}`
+
+     alertWinner();
+
 };
 
+// Function that checks the score and determines the winner of the series 
+
+const alertWinner = function(){
+    if (computerScore === 5 && userScore < 5) {
+        alert("Computer wins in first to 5 series");
+    } else if (userScore === 5 && computerScore < 5) {
+        alert("Human wins in first to 5 series");
+    };
+}
+
+let userScoreText = document.querySelector('#user-score-text');
+let computerScoreText = document.querySelector('#computer-score-text');
+
+let roundNumberText = document.querySelector('#round-number-text');
+
+// User chouice event listeners 
+
 rock.addEventListener('click', () => {
+    userChoice = 'Rock';
     determineWinner(computerChoice, userChoice);
 });
 
 paper.addEventListener('click', () => {
+    userChoice = 'Paper';
     determineWinner(computerChoice, userChoice);
 });
 
 scissors.addEventListener('click', () => {
+    userChoice = 'Scissors';
     determineWinner(computerChoice, userChoice);
 });
+
+
 
 
 
