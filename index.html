@@ -10,27 +10,56 @@
 
         <h1>Rock, Paper, Scissors!</h1>
 
-        <div id="outcome">
-            <p class="outcome text"></p>
+        <div class="container score outcome">
+
+            <div id="outcome">
+                <p class="outcome text"></p>
+            </div>
+
+            <div id="scoreboard">
+                <div class="user score container">
+                    <p>Human:</p>
+                    <p id="user-score-text"></p>
+                </div>
+
+                <div class="computer score container">
+                    <p>Computer:</p>
+                    <p id="computer-score-text"></p>
+                </div>
+            </div>
+
         </div>
 
+        <h3>Choose:</h3>
         <div class="container">
-            <h3>Choose:</h3>
-            <button class="rock">Rock</button>
-            <button class="paper">Paper</button>
-            <button class="scissors">Scissors</button>
+            <button class="rock">Rock
+                <img src="Images/rock.png">
+            </button>
+            <button class="paper">Paper
+                <img src="Images/paper.png">
+            </button>
+            <button class="scissors">Scissors
+                <img src="Images/scissors.png">
+            </button>
         </div>
 
         <div class="round">
 
-            <p>Human:</p>
+            
             <div class="user choice container">
+                <p>Human:</p>
                 <p id="user-choice-text"></p>
             </div>
 
-            <p>Computer:</p>
+            
             <div class="computer choice container">
+                <p>Computer:</p>
                 <p id="computer-choice-text"></p>
+            </div>
+
+            <div class="round-number">
+                <p>Round:</p>
+                <p id="round-number-text"></p>
             </div>
 
         </div>
